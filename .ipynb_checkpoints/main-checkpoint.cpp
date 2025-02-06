@@ -18,14 +18,7 @@ int main(){
     std::cout<<"A random number between 10 and 20 is: "<<model.uniform(10,20)<<std::endl;
 
     model.randomStart();
-    
-    std::string root = "frames/frame";
-    for (int iteration = 0; iteration <iterations;iteration++)
-    {   std::cout<<"iteration"<<iteration<<std::endl;
-        if (iteration%5==0) model.saveConfig( root+std::to_string(iteration));
-
-
-    
+    model.saveConfig("init.conf");
     model.updateRule();
 
 
